@@ -16,7 +16,6 @@ let images = sliderImages?.map(function(el) {
   return {name:el.name,temperament:el.temperament,...el.image};
 });
 
-
     return (
         <>
          <h1>Main slider</h1>

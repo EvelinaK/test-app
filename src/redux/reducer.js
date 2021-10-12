@@ -12,8 +12,6 @@ fetchImageError,
 
 
 
-
-
 const slider = createReducer([], {
   [fetchSlideSuccess]: (_, { payload }) => [...payload],
 });

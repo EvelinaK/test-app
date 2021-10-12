@@ -18,7 +18,6 @@ axios.defaults.params = {
 };
 
 export const fetchImageSlide = ()=> async (dispatch) => {
-
     dispatch(fetchSlideRequest());
     try {
        const { data } = await axios.get(`${BASE_URL}/breeds?limit=${8}&page=${0}&order=Desc/${API_KEY}`);
@@ -39,7 +38,6 @@ export const getImage =(currentPage ) => async (dispatch) => {
       data :res.data  
      }
       dispatch(fetchImageSuccess(response));
-  
     } catch (error) {
       dispatch(fetchImageError(error));
     }

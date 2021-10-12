@@ -15,10 +15,10 @@ function ProductsView() {
   const [pageCount, setPageCount] = useState(0);
   const [lastLoadedPage, setLastLoadedPage] = useState(1);
   const dispatch = useDispatch();
-    const contentImages = useSelector(selectors.getAllImg);
-    const allPages = useSelector(selectors.getAllpages);
-    const limit = useSelector(selectors.getlimit);                 
-const currentPage = useSelector(selectors.getPage);      
+  const contentImages = useSelector(selectors.getAllImg);
+  const allPages = useSelector(selectors.getAllpages);
+  const limit = useSelector(selectors.getlimit);                 
+  const currentPage = useSelector(selectors.getPage);      
 
 
  useEffect(() => {
@@ -28,7 +28,6 @@ const currentPage = useSelector(selectors.getPage);
 
 
   const handlePageClick = (e) => {
-    debugger
     const selectedPage = e.selected + 1;
     setOffset(selectedPage);
     setLastLoadedPage(selectedPage);

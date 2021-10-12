@@ -21,7 +21,6 @@ axios.defaults.params = {
 };
 
 export const fetchImageSlide = ()=> async (dispatch) => {
-  debugger
     dispatch(fetchSlideRequest());
     try {
        const { data } = await axios.get(`${BASE_URL}/breeds?limit=${8}&page=${0}&order=Desc/${API_KEY}`);
